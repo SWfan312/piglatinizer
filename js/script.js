@@ -6,16 +6,43 @@
 
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
-  
-
-
+	$("#symbol").click(function() {
+		var input = $("#input").val();
+		toPigLatin(input);
+	})
+	
+	function toPigLatin(input) {
+		
+	
+		// `.split` the input and assign to variable
+		var words = input.split(' ');
+		// loop over the split input (for loop)
+		for (var counter = 0; counter < 4; counter = counter + 1) {
+			console.log(words[counter]);
+			var word = words[counter];
+			// if word starts with vowel
+			// if words does not start with vowel
+			// String.slice
+			var firstletter = word.slice(0, 1);
+			
+			if (["a", "e", "i", "o", "u"].includes(firstletter)) {
+			    console.log('it is a vowel');
+			    word + "yay"
+			} else {
+			    console.log('its a constanant')
+			}
+			
+			// 
+		}
+		// console.log each word
+		
+		
+	}
 
 });
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
-
-
 
 
 
